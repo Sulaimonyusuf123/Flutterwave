@@ -11,30 +11,39 @@ const SimpleSlider = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
 
   return (
-    <div className='w-[90%] ml-16 p-2'>
+    <div className='w-[90%] mx-auto p-2'>
       <Slider {...settings}>
-        <div className='p-2'>
-          <img src="use1.jpg" alt="Image 1" className=''/>
-          <h2 className='font-bold text-2xl mt-4'>Romwe Fashion</h2>
-          <p>ROMWE improves developers efficiency by 30% with <br/>Flutter</p>
+        <div className='p-2 text-center'>
+          <img src="use1.jpg" alt="Image 1" className='w-full rounded-lg'/>
+          <h2 className='font-bold text-xl mt-4'>Romwe Fashion</h2>
+          <p className='text-sm'>ROMWE improves developers' efficiency by 30% with Flutter.</p>
         </div>
-        <div className='p-2'>
-          <img src="use2.jpg" alt="Image 2" />
-          <h2 className='font-bold text-2xl mt-4'>Tencent cloud chart</h2>
-          <p>Tensent cloud chart increases developmenmt efficiency by <br/> 77% with flutter</p>
+        <div className='p-2 text-center'>
+          <img src="use2.jpg" alt="Image 2" className='w-full rounded-lg'/>
+          <h2 className='font-bold text-xl mt-4'>Tencent Cloud Chart</h2>
+          <p className='text-sm'>Tencent Cloud Chart increases development efficiency by 77% with Flutter.</p>
         </div>
-        <div className='p-2'>
-          <img src="use3.jpg" alt="Image 3" />
-          <h2 className='font-bold mt-4 text-2xl'>Google classroom</h2>
-          <p>increaesed productivity with flutter</p>
+        <div className='p-2 text-center'>
+          <img src="use3.jpg" alt="Image 3" className='w-full rounded-lg'/>
+          <h2 className='font-bold mt-4 text-xl'>Google Classroom</h2>
+          <p className='text-sm'>Increased productivity with Flutter.</p>
         </div>
-        <div className='p-2'>
-          <img src="use4.jpg" alt="Image 3" />
-          <h2 className='font-bold mt-4 text-2xl'>Reflection.app</h2>
-          <p>Reflection scales thier business with flutter</p>
+        <div className='p-2 text-center'>
+          <img src="use4.jpg" alt="Image 4" className='w-full rounded-lg'/>
+          <h2 className='font-bold mt-4 text-xl'>Reflection.app</h2>
+          <p className='text-sm'>Reflection scales their business with Flutter.</p>
         </div>
       </Slider>
     </div>
